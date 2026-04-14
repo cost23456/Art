@@ -18,7 +18,7 @@ public class Puzzle : MonoBehaviour
   
     void Start()
     {
-        //over.SetActive(false);
+        over.SetActive(false);
         Weiz = new Vector3[row, column];
          CreatPuzzle();
         PrintAllCorrectPos();

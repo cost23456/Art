@@ -19,6 +19,7 @@ public class BagManager : MonoBehaviour
             Destroy(this);
         }
         instance = this;
+        
     }
     private void OnEnable()
     {
