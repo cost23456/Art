@@ -58,4 +58,15 @@ public class BagManager : MonoBehaviour
             instance.slots[i].GetComponent<slot>().SetupSlot(instance.myBag.itemList[i]);
         }
     }
+    
+    /// <summary>
+    /// 向背包添加物品的接口方法
+    /// </summary>
+    /// <param name="item">要添加的物品</param>
+    public static void AddItem(ItemData item)
+    {
+        instance.myBag.itemList.Add(item);
+        RefreshItem();
+    }
 }
+
