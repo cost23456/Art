@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 4582845884137676450}
   - component: {fileID: 811662024621478286}
   - component: {fileID: 7820185807489098931}
-  - component: {fileID: 2014822626102285521}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +50,7 @@ Animator:
   m_UpdateMode: 0
   m_UpdateFrequencyMode: 0
   m_UpdateFrequency: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -85,24 +84,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.49, z: 0}
---- !u!114 &2014822626102285521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7445154048315486616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e48bb4b8f3ebbe84b9269dad7fa73cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WalkSpeed: 5
-  RunSpeed: 8
-  MouseSensitivity: 1
-  MinPitch: 10
-  MaxPitch: 30
-  Gravity: 20
 --- !u!1001 &2098970960746145805
 PrefabInstance:
   m_ObjectHideFlags: 0
