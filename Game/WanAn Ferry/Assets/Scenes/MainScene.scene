@@ -1321,9 +1321,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d60cf74ccd486d4580834eb37fd2e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMainMenu: {fileID: 470839032}
-  mSetting: {fileID: 2019724408}
-  mTaskMenu: {fileID: 998936555}
+  CurUIPage: {fileID: 0}
+  LastUIPage: {fileID: 0}
+  mMainMenu: {fileID: 1209501909}
+  mSetting: {fileID: 798538219}
+  mTaskMenu: {fileID: 998936557}
   mBag: {fileID: 175290490}
 --- !u!1 &651370380
 GameObject:
@@ -3219,7 +3221,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1273146856}
-  - {fileID: 1349569461}
   - {fileID: 2146405872}
   - {fileID: 642200001}
   m_Father: {fileID: 0}
@@ -3830,52 +3831,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50a90528349e714e954cbb29a56f7c2, type: 3}
---- !u!1 &1349569460
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
-  m_Component:
-  - component: {fileID: 1349569461}
-  - component: {fileID: 1349569462}
-  m_Layer: 0
-  m_HasEditorInfo: 1
-  m_Name: MouseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1349569461
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349569460}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1172533673}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1349569462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349569460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 952f01f2efd73ae428459c2fac726c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Destance: 10000
 --- !u!1 &1367404686
 GameObject:
   m_ObjectHideFlags: 0
@@ -6268,7 +6223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskDatas:
-  - {fileID: 11400000, guid: 78e5464b05aa1374ab909f531d8ab5ee, type: 2}
   - {fileID: 11400000, guid: 78e5464b05aa1374ab909f531d8ab5ee, type: 2}
   - {fileID: 11400000, guid: 78e5464b05aa1374ab909f531d8ab5ee, type: 2}
   - {fileID: 11400000, guid: 78e5464b05aa1374ab909f531d8ab5ee, type: 2}
