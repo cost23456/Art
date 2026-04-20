@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4582845884137676450}
   - component: {fileID: 811662024621478286}
   - component: {fileID: 7820185807489098931}
-  - component: {fileID: 2014822626102285521}
+  - component: {fileID: 7597716056820691316}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1921827074304053222}
   m_Father: {fileID: 0}
@@ -51,7 +51,7 @@ Animator:
   m_UpdateMode: 0
   m_UpdateFrequencyMode: 0
   m_UpdateFrequency: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -81,11 +81,11 @@ CharacterController:
   m_Height: 0.4
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.49, z: 0}
---- !u!114 &2014822626102285521
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &7597716056820691316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,15 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7445154048315486616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e48bb4b8f3ebbe84b9269dad7fa73cff, type: 3}
+  m_Script: {fileID: 11500000, guid: a53a1bdf50be96a4e8f2b751e54cb935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 5
-  RunSpeed: 8
-  MouseSensitivity: 1
-  MinPitch: 10
-  MaxPitch: 30
-  Gravity: 20
+  turnSpeed: 30
+  mainCamera: {fileID: 0}
+  jumpHeight: 5
+  gravity: -10
+  moveSpeed: 3
 --- !u!1001 &2098970960746145805
 PrefabInstance:
   m_ObjectHideFlags: 0
