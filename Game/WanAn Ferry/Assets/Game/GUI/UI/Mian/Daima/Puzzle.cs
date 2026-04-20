@@ -12,13 +12,13 @@ public class Puzzle : MonoBehaviour
     public GameObject Kuaiss;
     public GameObject PT;
     public Vector3[,] Weiz;
-    public GameObject over;
-    public bool a = false;
-    public int b = 0;
+   // public GameObject over;
+    
+   
   
     void Start()
     {
-        over.SetActive(false);
+       // over.SetActive(false);
         Weiz = new Vector3[row, column];
          CreatPuzzle();
         PrintAllCorrectPos();
@@ -73,17 +73,17 @@ public class Puzzle : MonoBehaviour
     {
         return Weiz[x, y];
     }
-    public void JiShu()
-    {
-        if (a) return;
-        b++;
-        if (b == 16)
-        {
-            over.SetActive(true);
-            a = true;
-            over.transform.SetAsLastSibling();
-        }
-    }
+    //public void JiShu()
+    //{
+    //    if (a) return;
+    //    b++;
+    //    if (b == 16)
+    //    {
+    //        over.SetActive(true);
+    //        a = true;
+    //        over.transform.SetAsLastSibling();
+    //    }
+    //}
     private void Update()
     {
         
