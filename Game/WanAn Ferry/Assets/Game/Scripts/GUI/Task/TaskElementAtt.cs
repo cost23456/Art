@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class TaskElementAtt : MonoBehaviour
 {
-    [UseReflection("AttText")]private TextMeshProUGUI mAttText;
+    [UseReflection("AttText")]private Text mAttText;
     private void Awake()
     {
-        //this.mAttText = this.transform.Find("AttText").GetComponent<TextMeshProUGUI>();
-    }
-    private void Start()
-    {
-        GameObjectReflectionBinder.BindGameObjects(this);
+        this.mAttText = this.transform.Find("AttText").GetComponent<Text>();
     }
     public void RefreshAll(TaskData curTask)
     {
@@ -20,6 +16,10 @@ public class TaskElementAtt : MonoBehaviour
         {
             Debug.Log("curTask == null");
             return;
+        }
+        if (mAttText == null)
+        {
+            this.mAttText = this.transform.Find("DescText").GetComponent<Text>();
         }
         //ÅÐ¶ÏË¢ÐÂÂß¼­
         if (curTask.isReceive && curTask.isSuccess == false)

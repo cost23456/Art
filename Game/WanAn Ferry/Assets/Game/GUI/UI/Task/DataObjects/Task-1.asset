@@ -24,4 +24,4 @@ MonoBehaviour:
   Item_ID: 
   Item_Count: 
   isSuccess: 0
-  isReceive: 1
+  isReceive: 0

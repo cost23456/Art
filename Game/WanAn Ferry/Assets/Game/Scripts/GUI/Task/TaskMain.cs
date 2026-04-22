@@ -9,6 +9,7 @@ public class TaskMain : MonoBehaviour
     private TaskElementDesc mEleDesc;
     private TaskElementAtt mEleAtt;
     private TaskElementReward mEleReward;
+    private TaskEleLittle mEleLittle;
     //²ÎÊý
     private TaskData mCurTask;
     private void Awake()
@@ -16,6 +17,7 @@ public class TaskMain : MonoBehaviour
         this.mEleDesc = this.transform.Find("Main/Task_DESC").GetComponent<TaskElementDesc>();
         this.mEleAtt = this.transform.Find("Main/Task_Attention").GetComponent<TaskElementAtt>();
         this.mEleReward = this.transform.Find("Main/Task_Reward").GetComponent<TaskElementReward>();
+        this.mEleLittle = this.transform.Find("LittleTask").GetComponent <TaskEleLittle>();
     }
     private void Start()
     {
@@ -30,6 +32,7 @@ public class TaskMain : MonoBehaviour
         this.mEleDesc.RefreshAll(mCurTask);
         this.mEleReward.RefreshAll(mCurTask);
         this.mEleAtt.RefreshAll(mCurTask);
+        this.mEleLittle.RefreshAll(mCurTask);
     }
 
 }

@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using DG.Tweening;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -11,10 +9,19 @@ public class UIManager : MonoBehaviour
     //组件
     public Main mMainMenu;
     public Seting mSetting;
-    public TaskMain mTaskMenu;
+    public GameObject mTaskMenu;
+    public GameObject mTaskLittle;
     public BagManager mBag;
-   
+    private bool isTaskMove = false;
     //生命周期
+    private void Update()
+    {
+        //UI按键
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            this.ContrlTaskPage();
+        }
+    }
     //方法
     public void ContrlMainPage()
     {
@@ -43,14 +50,19 @@ public class UIManager : MonoBehaviour
     public void ContrlTaskPage()
     {
         if (mTaskMenu == null) return;
-        if (mTaskMenu.gameObject.activeSelf == false)
+        this.isTaskMove = !this.isTaskMove;
+        if (isTaskMove)
         {
-            this.mTaskMenu.gameObject.SetActive(true);
+            this.mTaskMenu.transform.GetComponent<RectTransform>().DOAnchorPosY(0, 0.5f);
         }
-        else if (mTaskMenu.gameObject.activeSelf == true)
+        else if (!isTaskMove)
         {
-            this.mTaskMenu.gameObject.SetActive(false);
+            this.mTaskMenu.transform.GetComponent<RectTransform>().DOAnchorPosY(900, 0.5f);
         }
+    }
+    public void OpenTaskLittle()
+    {
+        this.mTaskLittle.SetActive(true);
     }
     public void ContrlBagPage()
     {
