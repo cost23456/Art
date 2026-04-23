@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
     public Seting mSetting;
     public TaskMain mTaskMenu;
     public BagManager mBag;
-   
     //生命周期
     //方法
     public void ContrlMainPage()
