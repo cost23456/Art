@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  _distance: 2
+  _distance: 1
   mouseSensitivity: 200
   minVerticalAngle: -30
   maxVerticalAngle: 50
