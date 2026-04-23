@@ -6,20 +6,21 @@ using UnityEngine;
 public class TaskMain : MonoBehaviour
 {
     //组件
-    [UseReflection("Task_DESC")]private TaskElementDesc mEleDesc;
-    [UseReflection("Task_Attention")]private TaskElementAtt mEleAtt;
-    [UseReflection("Task_Reward")]private TaskElementReward mEleReward;
+    private TaskElementDesc mEleDesc;
+    private TaskElementAtt mEleAtt;
+    private TaskElementReward mEleReward;
+    private TaskEleLittle mEleLittle;
     //参数
     private TaskData mCurTask;
     private void Awake()
     {
-        //this.mEleDesc = this.transform.Find("Task_DESC").GetComponent<TaskElementDesc>();
-        //this.mEleAtt = this.transform.Find("Task_Attention").GetComponent<TaskElementAtt>();
-        //this.mEleReward = this.transform.Find("Task_Reward").GetComponent<TaskElementReward>();
+        this.mEleDesc = this.transform.Find("Main/Task_DESC").GetComponent<TaskElementDesc>();
+        this.mEleAtt = this.transform.Find("Main/Task_Attention").GetComponent<TaskElementAtt>();
+        this.mEleReward = this.transform.Find("Main/Task_Reward").GetComponent<TaskElementReward>();
+        this.mEleLittle = this.transform.Find("LittleTask").GetComponent <TaskEleLittle>();
     }
     private void Start()
     {
-        GameObjectReflectionBinder.BindGameObjects(this);
         //事件
         EventManager.ON_SETACTIVE_TASK += this.RefreshTaskText;
         EventManager.ON_FINISHTASK += this.RefreshTaskText;
@@ -31,6 +32,7 @@ public class TaskMain : MonoBehaviour
         this.mEleDesc.RefreshAll(mCurTask);
         this.mEleReward.RefreshAll(mCurTask);
         this.mEleAtt.RefreshAll(mCurTask);
+        this.mEleLittle.RefreshAll(mCurTask);
     }
 
 }

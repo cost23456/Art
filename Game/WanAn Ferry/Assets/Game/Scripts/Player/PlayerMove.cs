@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private CharacterController Controller;
-
+    private Animator animator;
     [Header(" ‰»Î…Ë÷√")]
     private float horizontal;
     private float vertical;
@@ -25,7 +25,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        Controller = GetComponent<CharacterController>();
+        this.Controller = GetComponent<CharacterController>();
+        this.animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -52,6 +53,14 @@ public class PlayerMove : MonoBehaviour
         moveDirection = cameraForward * vertical + cameraRight * horizontal;
 
         Controller.Move(moveSpeed * Time.deltaTime * moveDirection.normalized);
+        if (moveDirection != Vector3.zero)
+        {
+            this.animator.SetBool("Run", true);
+        }
+        else 
+        {
+            this.animator.SetBool("Run", false);
+        }
     }
 
     private void SetPlayerRotation()

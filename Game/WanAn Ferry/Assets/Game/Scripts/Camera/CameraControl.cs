@@ -2,43 +2,65 @@
 
 public class CameraControl : MonoBehaviour
 {
-    public Transform player;
-    private Vector3 dir;
-    public float _distance; // 固定距离
+    [Header("基础设置")]
+    public Transform player;          // 玩家物体
+    public float _distance = 5f;      // 固定距离，你设置多少就是多少
+    public float mouseSensitivity = 400f; // 鼠标灵敏度
+
+    [Header("视角限制")]
+    public float minVerticalAngle = -30f;  // 最低俯视角度
+    public float maxVerticalAngle = 60f;   // 最高仰视角度
+
+    // 旋转角度记录
+    private float yaw;   // 左右旋转
+    private float pitch; // 上下旋转
 
     void Start()
     {
-        dir = player.position - transform.position;
-        _distance = dir.magnitude; // 记录初始长度，永远不变
+        // 游戏开始自动锁定鼠标到屏幕中心
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        // 初始化相机角度
+        Vector3 rot = transform.eulerAngles;
+        yaw = rot.y;
+        pitch = rot.x;
     }
 
     void LateUpdate()
     {
+        // 左Alt切换鼠标锁定/解锁
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked
-                ? CursorLockMode.None
-                : CursorLockMode.Locked;
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
 
-        // 左右旋转
-        if (Input.GetAxis("Mouse X") != 0)
+        // 只有锁定鼠标时才控制相机
+        if (Cursor.lockState == CursorLockMode.Locked)
         {
-            float mouseX = Input.GetAxis("Mouse X");
-            transform.RotateAround(player.position, Vector3.up, mouseX * 400 * Time.deltaTime);
+            // 获取鼠标输入
+            yaw += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+            // 限制上下视角，防止穿模
+            pitch = Mathf.Clamp(pitch, minVerticalAngle, maxVerticalAngle);
         }
 
-        // 上下旋转
-        if (Input.GetAxis("Mouse Y") != 0)
-        {
-            float mouseY = Input.GetAxis("Mouse Y");
-            transform.RotateAround(player.position, transform.right, -mouseY * 400 * Time.deltaTime);
-        }
+        // 计算相机最终位置（核心：距离永远固定）
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
+        Vector3 targetPos = player.position - rotation * Vector3.forward * _distance;
 
-        // 核心修复：方向变，但长度不变！
-        dir = player.position - transform.position;
-        transform.position = player.position - dir.normalized * _distance;
-
-        transform.LookAt(player);
+        // 应用相机位置和旋转
+        transform.rotation = rotation;
+        transform.position = targetPos;
     }
 }

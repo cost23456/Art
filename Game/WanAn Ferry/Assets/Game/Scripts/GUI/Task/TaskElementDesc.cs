@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class TaskElementDesc : MonoBehaviour
 {
-    [UseReflection("DescText")]private TextMeshProUGUI mDescText;
+    private Text mDescText;
     private void Awake()
     {
-        //this.mDescText = this.transform.Find("DescText").GetComponent<TextMeshProUGUI>();
-    }
-    private void Start()
-    {
-        GameObjectReflectionBinder.BindGameObjects(this);
+        this.mDescText = this.transform.Find("DescText").GetComponent<Text>();
     }
     public void RefreshAll(TaskData curTask)
     {

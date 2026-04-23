@@ -37,7 +37,7 @@ public class Kuai : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         if (IsInCorrectPosittion())
         {
             rectTransform.anchoredPosition = pingtu.GetCorrectPosition(x_index, y_indy);
-            pingtu.JiShu();
+         
             
         }
         else

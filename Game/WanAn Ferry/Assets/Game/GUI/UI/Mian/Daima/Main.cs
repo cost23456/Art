@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Main: MonoBehaviour
 {
+    public GameObject LoadScenes;
     public void Seting()
     {
         this.gameObject.SetActive(false);
@@ -14,5 +16,6 @@ public class Main: MonoBehaviour
     public void OnClose()
     {
         this.gameObject.SetActive(false);
-    }
+        LoadScenes.SetActive(true);
+}
 }
