@@ -31,7 +31,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 5.349999999999996
+    m_BlendOutDuration: 5.566666666666663
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -91,15 +91,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Virtual Camera 1
   - m_Version: 1
-    m_Start: 2.6333333333333333
+    m_Start: 2.4166666666666665
     m_ClipIn: 0
     m_Asset: {fileID: 9068403767817665742}
-    m_Duration: 10.150000000000002
+    m_Duration: 8.333333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6595980188596075307}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 5.349999999999996
+    m_BlendInDuration: 5.566666666666663
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2

@@ -13,7 +13,9 @@ public class UIManager : Singleton<UIManager>
     public GameObject mTaskMenu;
     public GameObject mTaskLittle;
     public BagManager mBag;
-    public GameObject mDialog;
+    public wenbenchat mDialog;
+    public GameObject mMap;
+    public GameObject mLoad;
     private bool isTaskMove = false;
     private bool isBagOpen = false;
     //生命周期
@@ -31,6 +33,10 @@ public class UIManager : Singleton<UIManager>
         else if (Input.GetKeyDown(KeyCode.E))
         {
             this.ContrlDialogPage();
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            this.ContrlMapPage();
         }
     }
     //方法
@@ -98,6 +104,30 @@ public class UIManager : Singleton<UIManager>
         else if (mDialog.gameObject.activeSelf == true)
         {
             this.mDialog.gameObject.SetActive(false);
+        }
+    }
+    public void ContrlMapPage()
+    {
+        if (mMap == null) return;
+        if (mMap.gameObject.activeSelf == false)
+        {
+            this.mMap.gameObject.SetActive(true);
+        }
+        else if (mMap.gameObject.activeSelf == true)
+        {
+            this.mMap.gameObject.SetActive(false);
+        }
+    }
+    public void ContrlLoadPage()
+    {
+        if (mLoad == null) return;
+        if (mLoad.gameObject.activeSelf == false)
+        {
+            this.mLoad.gameObject.SetActive(true);
+        }
+        else if (mLoad.gameObject.activeSelf == true)
+        {
+            this.mLoad.gameObject.SetActive(false);
         }
     }
 }

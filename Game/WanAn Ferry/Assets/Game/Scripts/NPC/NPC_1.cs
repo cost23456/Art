@@ -8,12 +8,21 @@ public class NPC_1 : MonoBehaviour
     //组件
 
     //生命周期
+    private void OnTriggerEnter(Collider other)
+    {
+        UIManager.Instance.ContrlDialogPage();
+    }
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
             this.ActiveTask();
         }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        UIManager.Instance.ContrlDialogPage();
     }
     //方法
     public void ActiveTask()
