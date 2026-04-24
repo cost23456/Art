@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,6 @@ public class BagManager : MonoBehaviour
             Destroy(this);
         }
         instance = this;
-        
     }
     private void OnEnable()
     {

@@ -2,7 +2,7 @@ using DG.Tweening;
 using System.Collections.Specialized;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     //²ÎÊý
     public GameObject CurUIPage = null;

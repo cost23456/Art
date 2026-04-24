@@ -20,7 +20,7 @@ public class TaskItem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Destroy(this.gameObject);
-            TaskManager.GetSingleton().SetFinishTask(mItemData.TaskItemData_ID);
+            TaskManager.Instance.SetFinishTask(mItemData.TaskItemData_ID);
             EventManager.OnFinishTask(1);
         }
     }
