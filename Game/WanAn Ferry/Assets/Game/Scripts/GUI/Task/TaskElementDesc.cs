@@ -24,7 +24,7 @@ public class TaskElementDesc : MonoBehaviour
         }
         else if (curTask.isSuccess)
         {
-            this.mDescText.text = curTask.Reward_Info[0].ToString();
+            //this.mDescText.text = curTask.Reward_Info[0].ToString();
         }
     }
 }

@@ -7,10 +7,6 @@ public class TaskItem : MonoBehaviour
 {
     public TaskItemData mItemData;
     //生命周期
-    private void Start()
-    {
-       
-    }
     private void OnTriggerEnter(Collider other)
     {
         //TODO：打开UI

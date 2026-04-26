@@ -28,7 +28,7 @@ public class TaskElementAtt : MonoBehaviour
         }
         else if (curTask.isSuccess)
         {
-            this.mAttText.text = curTask.Reward_Info[1].ToString();
+            //this.mAttText.text = curTask.Reward_Info[1].ToString();
         }
     }
 }

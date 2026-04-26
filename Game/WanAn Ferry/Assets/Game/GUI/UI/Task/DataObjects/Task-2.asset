@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244ac0aa2e956f14a8ea922dd47f323a, type: 3}
+  m_Name: Task-2
+  m_EditorClassIdentifier: 
+  Task_ID: 2
+  Task_Desc: "\u5728\u94C1\u5320\u94FA\u9644\u8FD1\u627E\u56DE\u4E22\u5931\u7684\u4E09\u526F\u71D5\u5C3E\u69AB "
+  Task_Attention: "\u53EF\u80FD\u6389\u5728\u68DA\u5B50\u5468\u56F4\u6216\u8DEF\u8FB9 "
+  Task_Reward: "\u71D5\u5C3E\u69AB\u7528\u6CD5\u548C\u6570\u636E"
+  Reward_Info: []
+  Item_ID: 
+  Item_Count: 
+  isSuccess: 0
+  isReceive: 0

@@ -143,3 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 595bfa059e595714a9325345cb04643d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RecieveTaskAudio:
+  - {fileID: 8300000, guid: 437941e372d37ab47a80fb3540ca2741, type: 3}
+  - {fileID: 8300000, guid: 61cdf4b230ec4f445a7af41bb6c5a222, type: 3}
+  FinshTaskAudio:
+  - {fileID: 8300000, guid: afd71c5ffb623d64d9f3936c00033c19, type: 3}

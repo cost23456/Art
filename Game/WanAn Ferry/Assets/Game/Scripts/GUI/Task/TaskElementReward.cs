@@ -28,7 +28,7 @@ public class TaskElementReward : MonoBehaviour
         }
         else if (curTask.isSuccess)
         {
-            this.mRewardText.text = curTask.Reward_Info[2].ToString();
+            //this.mRewardText.text = curTask.Reward_Info[2].ToString();
         }
     }
 }

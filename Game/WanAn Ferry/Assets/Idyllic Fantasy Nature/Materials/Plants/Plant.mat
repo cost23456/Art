@@ -27,7 +27,8 @@ Material:
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -152,7 +153,7 @@ Material:
     - _WindSpeed2: 0
     - _WindStrength: 1
     - _Wind_Direction: 0
-    - _Wind_Speed: 2.4
+    - _Wind_Speed: 1
     - _Wind_Strength: 0.2
     - _Wind_Variation: 0
     - _WorkflowMode: 0

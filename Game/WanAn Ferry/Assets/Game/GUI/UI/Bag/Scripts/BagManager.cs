@@ -1,4 +1,5 @@
 using System.Collections;
+
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class BagManager : MonoBehaviour
     public GameObject emtySlot;
     public Text itemInformation;
     public List<GameObject> slots = new List<GameObject>();
+    public AudioClip OpenFX;
     private void Awake()
     {
         if (instance != null)
@@ -26,6 +28,7 @@ public class BagManager : MonoBehaviour
         RefreshItem();
         instance.itemInformation.text = "";
     }
+
     public static void UpdateItemInfo(string itemDescription)
     {
         instance.itemInformation.text = itemDescription;
@@ -67,5 +70,10 @@ public class BagManager : MonoBehaviour
     {
         instance.myBag.itemList.Add(item);
         RefreshItem();
+    }
+
+    public void PlayAudio()
+    {
+        AudioManager.Instance.PlayFXAudio(OpenFX);
     }
 }
