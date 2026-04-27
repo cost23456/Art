@@ -26,5 +26,6 @@ public class TaskItem : MonoBehaviour
     }
     private void OnDestroy()
     {
+        BagManager.Instance.AddBagItem(6);
     }
 }

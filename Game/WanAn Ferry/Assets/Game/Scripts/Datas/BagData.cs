@@ -5,15 +5,5 @@ using UnityEngine;
 public class BagData : ScriptableObject
 {
     public List<ItemData> itemList = new List<ItemData>();
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }
