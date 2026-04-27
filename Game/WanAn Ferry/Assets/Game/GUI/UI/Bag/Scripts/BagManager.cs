@@ -71,7 +71,6 @@ public class BagManager : MonoBehaviour
         instance.myBag.itemList.Add(item);
         RefreshItem();
     }
-
     public void PlayAudio()
     {
         AudioManager.Instance.PlayFXAudio(OpenFX);
