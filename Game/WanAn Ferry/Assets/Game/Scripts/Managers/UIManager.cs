@@ -16,7 +16,7 @@ public class UIManager : Singleton<UIManager>
     public Seting mSetting;
     public GameObject mTaskMenu;
     public GameObject mTaskLittle;
-    public BagManager mBag;
+    public BagMain mBag;
     public wenbenchat mDialog;
     public GameObject mMap;
     public GameObject mMapLittle;

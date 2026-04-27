@@ -4,9 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Props/New Item")]
 public class ItemData : ScriptableObject
 {
-    public string itemName;
+    public int Item_ID;
     public Sprite itemImage;
-    public int itemHeld;
     [TextArea]
     public string itemInfo;
 }
