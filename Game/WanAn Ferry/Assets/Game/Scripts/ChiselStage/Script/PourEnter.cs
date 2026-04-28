@@ -11,20 +11,28 @@ public class PourEnter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) inArea = true;
+        if (other.CompareTag("Player"))
+            inArea = true;
     }
-    private void OnTriggerExit(Collider other)
+
+    private void OnExit(Collider other)
     {
-        if (other.CompareTag("Player")) inArea = false;
+        if (other.CompareTag("Player"))
+            inArea = false;
     }
 
     void Update()
     {
+        // 这里修复正确了
         if (inArea && Input.GetKeyDown(KeyCode.E))
         {
             cam3.SetActive(false);
             cam1.SetActive(true);
             player.SetActive(false);
+
+            // 锁定鼠标
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

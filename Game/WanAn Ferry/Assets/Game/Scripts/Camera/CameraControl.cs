@@ -63,4 +63,12 @@ public class CameraControl : MonoBehaviour
         transform.rotation = rotation;
         transform.position = targetPos;
     }
+    private void OnEnable()
+    {
+        // 每次相机被激活，强制重新锁定鼠标（如果你的相机脚本是锁定鼠标的）
+        // 或者，如果你不想一直锁定，就只在OnEnable里重置输入
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Input.ResetInputAxes();
+    }
 }
