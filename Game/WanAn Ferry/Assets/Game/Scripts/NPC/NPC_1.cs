@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC_1 : MonoBehaviour
 {
     //参数
-    private int NPC_ID = 1;
+    public int NPC_ID = 1;
     //组件
     public List<AudioClip> RecieveTaskAudio;
     public List<AudioClip> FinshTaskAudio;
@@ -15,7 +15,7 @@ public class NPC_1 : MonoBehaviour
         UIManager.Instance.ContrlDialogPage();
         if (TaskManager.Instance.JudgeTaskFinsh(NPC_ID))
         {
-            UIManager.Instance.mDialog.Init(2);
+            UIManager.Instance.mDialog.Init(NPC_ID+1);
             UIManager.Instance.mDialog.GetAudioFormNPC(FinshTaskAudio);
             Debug.Log("FinshTaskAudio");
         }
@@ -61,8 +61,8 @@ public class NPC_1 : MonoBehaviour
             return;
         }
         // 执行任务
-        TaskManager.Instance.SetActiveTask(1);
+        TaskManager.Instance.SetActiveTask(NPC_ID);
         // 新增：判断EventManager是否初始化（静态事件无需实例，但静态方法需要初始化）
-        EventManager.OnSetActiveTask(1);
+        EventManager.OnSetActiveTask(NPC_ID);
     }
 }

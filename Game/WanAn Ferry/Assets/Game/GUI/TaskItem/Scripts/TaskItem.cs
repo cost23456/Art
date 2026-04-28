@@ -6,26 +6,19 @@ using UnityEngine;
 public class TaskItem : MonoBehaviour
 {
     public TaskItemData mItemData;
+    public int TaskReward_ID;
     //生命周期
-    private void OnTriggerEnter(Collider other)
-    {
-        //TODO：打开UI
-    }
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             Destroy(this.gameObject);
             TaskManager.Instance.SetFinishTask(mItemData.TaskItemData_ID);
-            EventManager.OnFinishTask(1);
+            EventManager.OnFinishTask(mItemData.TaskItemData_ID);
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        //TODO：关闭UI
     }
     private void OnDestroy()
     {
-        BagManager.Instance.AddBagItem(6);
+        BagManager.Instance.AddBagItem(TaskReward_ID);
     }
 }
