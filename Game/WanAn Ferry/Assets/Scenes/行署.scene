@@ -7005,17 +7005,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 277329571851330416, guid: 45f67bc53d3c55a44877f8d7762b14b1, type: 3}
-      propertyPath: m_StepOffset
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2087683633374194875, guid: 45f67bc53d3c55a44877f8d7762b14b1, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1842059001}
     - target: {fileID: 2497915335898454855, guid: 45f67bc53d3c55a44877f8d7762b14b1, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player_Xingshu
       objectReference: {fileID: 0}
     - target: {fileID: 3932886433691222910, guid: 45f67bc53d3c55a44877f8d7762b14b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7113,6 +7109,10 @@ PrefabInstance:
     - target: {fileID: 4340150364052087995, guid: 9c8c941365e17574881fb1fee2adcd5e, type: 3}
       propertyPath: m_Name
       value: MapCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684643713578233066, guid: 9c8c941365e17574881fb1fee2adcd5e, type: 3}
+      propertyPath: m_TranslationOffset.y
+      value: 16.33
       objectReference: {fileID: 0}
     - target: {fileID: 7684643713578233066, guid: 9c8c941365e17574881fb1fee2adcd5e, type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform

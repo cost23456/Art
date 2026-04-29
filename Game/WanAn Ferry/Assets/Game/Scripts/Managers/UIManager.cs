@@ -23,6 +23,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject mLoad;
     public CameraControl mMainCamera;
     public GameObject Icon;
+    public GameObject mStartGame;
     public List<GameObject> mTips;
     public List<GameObject> mPromote;
     //ÉúÃüÖÜÆÚ
@@ -205,6 +206,18 @@ public class UIManager : Singleton<UIManager>
         else if (mPromote[aIndex].gameObject.activeSelf == true)
         {
             this.mPromote[aIndex].gameObject.SetActive(false);
+        }
+    }
+    public void ContrlStartGame()
+    {
+        if(mStartGame == null) return;
+        if (mStartGame.gameObject.activeSelf == false)
+        {
+            this.mStartGame.SetActive(true);
+        }
+        else if (mStartGame.gameObject.activeSelf == true)
+        {
+            this.mStartGame.SetActive(false);
         }
     }
 }

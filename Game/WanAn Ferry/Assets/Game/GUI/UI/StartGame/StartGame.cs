@@ -75,7 +75,7 @@ public class StartGame : MonoBehaviour
     {
         yield return new WaitForSeconds(Times);
         AudioManager.Instance.PlayFXAudio(DialogClip);
-        yield return new WaitForSeconds(36.8f);
-        AudioManager.Instance.BGM.Stop();
+        yield return new WaitForSeconds(36.5f);
+        AudioManager.Instance.FX.Stop();
     }
 }

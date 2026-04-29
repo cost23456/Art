@@ -76,6 +76,10 @@
             "m_Id": "0c0b416f0ed54d8d807de80745ee2dcd"
         }
     ],
+    "m_LoopStartNodes": [],
+    "m_LoopEndNodes": [],
+    "m_LocalVariables": [],
+    "m_RegisterIDs": [],
     "m_GroupDatas": [],
     "m_StickyNoteDatas": [],
     "m_Edges": [
@@ -323,15 +327,21 @@
             "x": 0.0,
             "y": 0.0
         },
-        "m_Blocks": []
+        "m_Blocks": [],
+        "m_IsCustomContextData": false,
+        "m_CustomPassIndex": 0
     },
     "m_FragmentContext": {
         "m_Position": {
             "x": 0.0,
             "y": 0.0
         },
-        "m_Blocks": []
+        "m_Blocks": [],
+        "m_IsCustomContextData": false,
+        "m_CustomPassIndex": 0
     },
+    "m_VertexContextList": [],
+    "m_FragmentContextList": [],
     "m_PreviewData": {
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
@@ -345,6 +355,8 @@
     "m_OutputNode": {
         "m_Id": "30e205da21994a858b6b83bca603804c"
     },
+    "m_SubDatas": [],
+    "m_MasterNodeShaderStats": "Vertex Shader Stats: \n   - ConstantBuffer Count: 2 \n   - NumSamplers: 0 \n   - Resources Count: 0 \n   - Attributes Used: Position, TexCoord0 \n\nFragment Shader Stats: \n   - ConstantBuffer Count: 2 \n   - NumSamplers: 0 \n   - Resources Count: 1 \n\nTotal Samplers: 0/16 \nTexture Sample Count: 0 \nCustom Interpolator Count: 0",
     "m_ActiveTargets": []
 }
 
@@ -437,6 +449,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -486,6 +499,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -609,6 +623,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -658,6 +673,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -781,6 +797,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -974,6 +991,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1001,7 +1019,7 @@
     "m_StageCapability": 3,
     "m_BareResource": false,
     "m_Texture": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "m_DefaultType": 3
@@ -1052,6 +1070,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1176,6 +1195,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1292,8 +1312,9 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
+    "m_Priority": 10,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -1343,6 +1364,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1444,6 +1466,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
+    "m_Priority": 10,
     "m_Value": 0.0,
     "m_FloatType": 0,
     "m_RangeValues": {
@@ -1531,6 +1554,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1602,6 +1626,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1725,6 +1750,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1835,6 +1861,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1862,7 +1889,7 @@
     "m_StageCapability": 3,
     "m_BareResource": false,
     "m_Texture": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "m_DefaultType": 3
@@ -1894,6 +1921,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2064,6 +2092,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2142,6 +2171,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2279,6 +2309,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
+    "m_Priority": 10,
     "m_Value": 0.0,
     "m_FloatType": 0,
     "m_RangeValues": {
@@ -2336,6 +2367,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": false,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -2380,6 +2412,7 @@
     "synonyms": [],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
+    "m_NodeLOD": 0,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
