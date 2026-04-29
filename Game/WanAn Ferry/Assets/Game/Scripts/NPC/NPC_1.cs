@@ -33,6 +33,10 @@ public class NPC_1 : MonoBehaviour
             if (UIManager.Instance.mDialog.isDialogCompleted == true)
             {
                 this.ActiveTask();
+                if (TaskManager.Instance.JudgeTaskFinsh(Task_ID))
+                {
+                    UIManager.Instance.ContrlPromote(Task_ID);
+                }
             }
             else
             {

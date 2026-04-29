@@ -198,6 +198,7 @@ public class UIManager : Singleton<UIManager>
     }
     public void ContrlPromote(int aIndex)
     {
+        aIndex--;
         if (mPromote[aIndex] == null) return;
         if(mPromote[aIndex].gameObject.activeSelf == false)
         {
