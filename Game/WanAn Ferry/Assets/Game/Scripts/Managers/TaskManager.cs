@@ -5,6 +5,7 @@ using UnityEngine;
 public class TaskManager : Singleton<TaskManager>
 {
     public List<TaskData> taskDatas;
+    public List<TaskItem> taskItems;
     
     //获取任务数据
     public TaskData GetTask(int aTask_ID)

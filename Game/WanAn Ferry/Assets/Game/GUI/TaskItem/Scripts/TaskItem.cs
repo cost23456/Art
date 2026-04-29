@@ -1,13 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class TaskItem : MonoBehaviour
 {
     public TaskItemData mItemData;
+    public GameObject MainObject;
     public int TaskReward_ID;
     //ÉúÃüÖÜÆÚ
+    private void Update()
+    {
+        if (TaskManager.Instance.JudgeTaskReceive(mItemData.TaskItemData_ID) && MainObject != null)
+        {
+            this.MainObject.SetActive(true);
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -15,10 +21,7 @@ public class TaskItem : MonoBehaviour
             Destroy(this.gameObject);
             TaskManager.Instance.SetFinishTask(mItemData.TaskItemData_ID);
             EventManager.OnFinishTask(mItemData.TaskItemData_ID);
+            BagManager.Instance.AddBagItem(TaskReward_ID);
         }
-    }
-    private void OnDestroy()
-    {
-        BagManager.Instance.AddBagItem(TaskReward_ID);
     }
 }

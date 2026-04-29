@@ -7,7 +7,7 @@ public class wenbenchat : MonoBehaviour
     //参数
     public  int mAudioClipIndex = 0;
     public  int mDialogIndex = 0;
-    public bool isDialogCompleted = false;
+    public  bool isDialogCompleted = false;
     //组件
     public List<TextAsset> textAsset;
     public Text nameText; // 改名避免和关键字冲突
