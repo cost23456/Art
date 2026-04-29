@@ -9,6 +9,10 @@ public class TaskItem : MonoBehaviour
     //ÉúÃüÖÜÆÚ
     private void Update()
     {
+        if (TaskManager.Instance.JudgeTaskFinsh((mItemData.TaskItemData_ID)))
+        {
+            return;
+        }
         if (TaskManager.Instance.JudgeTaskReceive(mItemData.TaskItemData_ID) && MainObject != null)
         {
             this.MainObject.SetActive(true);

@@ -6,6 +6,7 @@ public class NPC_1 : MonoBehaviour
 {
     //参数
     public int NPC_ID = 1;
+    public int Task_ID = 1;
     //组件
     public List<AudioClip> RecieveTaskAudio;
     public List<AudioClip> FinshTaskAudio;
@@ -24,14 +25,6 @@ public class NPC_1 : MonoBehaviour
             UIManager.Instance.mDialog.Init(NPC_ID);
             UIManager.Instance.mDialog.GetAudioFormNPC(RecieveTaskAudio);
         }
-    }
-    private void OnTriggerStay(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
-        {
-            this.ActiveTask();
-        }
-        
     }
     private void OnTriggerExit(Collider other)
     {
@@ -61,8 +54,8 @@ public class NPC_1 : MonoBehaviour
             return;
         }
         // 执行任务
-        TaskManager.Instance.SetActiveTask(NPC_ID);
+        TaskManager.Instance.SetActiveTask(Task_ID);
         // 新增：判断EventManager是否初始化（静态事件无需实例，但静态方法需要初始化）
-        EventManager.OnSetActiveTask(NPC_ID);
+        EventManager.OnSetActiveTask(Task_ID);
     }
 }

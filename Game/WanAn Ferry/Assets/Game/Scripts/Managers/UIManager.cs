@@ -24,6 +24,7 @@ public class UIManager : Singleton<UIManager>
     public CameraControl mMainCamera;
     public GameObject Icon;
     public List<GameObject> mTips;
+    public List<GameObject> mPromote;
     //ÉúÃüÖÜÆÚ
     private void Update()
     {
@@ -192,6 +193,18 @@ public class UIManager : Singleton<UIManager>
         else if (Icon.gameObject.activeSelf == true)
         {
             this.Icon.SetActive(false);
+        }
+    }
+    public void ContrlPromote(int aIndex)
+    {
+        if (mPromote[aIndex] == null) return;
+        if(mPromote[aIndex].gameObject.activeSelf == false)
+        {
+            this.mPromote[aIndex].gameObject.SetActive(true);
+        }
+        else if (mPromote[aIndex].gameObject.activeSelf == true)
+        {
+            this.mPromote[aIndex].gameObject.SetActive(false);
         }
     }
 }
