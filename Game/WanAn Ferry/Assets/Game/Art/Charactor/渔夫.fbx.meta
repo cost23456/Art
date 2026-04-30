@@ -24,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     aCLCompressionLevel: 3
     aCLCurvePrecision: 0.01
     aCLFastSampleMode: 1
@@ -45,8 +45,8 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    totalVerticesCount: 908950
-    totalTrianglesCount: 1499997
+    totalVerticesCount: 32218
+    totalTrianglesCount: 50000
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
@@ -145,8 +145,14 @@ ModelImporter:
       streamablePageSize: 0
       reserveTrianglePercent: 100
       reserveDetailLevel: 0
-    selectedVGMeshes: []
-    supportVGMeshes: []
+    selectedVGMeshes:
+    - index: 0
+      meshName: node_0
+      meshGeometryBuffer: 0
+    supportVGMeshes:
+    - index: 0
+      meshName: node_0
+      meshGeometryBuffer: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -176,13 +182,13 @@ ModelImporter:
     rootMotionBoneName: 
     defaultPoseIndex: -1
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
