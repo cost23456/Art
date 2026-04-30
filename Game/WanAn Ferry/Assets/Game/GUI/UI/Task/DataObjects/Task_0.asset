@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Task_0
   m_EditorClassIdentifier: 
   Task_ID: 0
-  Task_Desc: "\u53BB\u957F\u8857\u5BFB\u627E\u674E\u4E09"
+  Task_Desc: "\u53BB\u957F\u8857\u5BFB\u627E\u9648\u4E09"
   Task_Attention: 
   Task_Reward: 
   Reward_Info: []

@@ -13,17 +13,21 @@ public class NPC_1 : MonoBehaviour
     //ÉúÃüÖÜÆÚ
     private void OnTriggerEnter(Collider other)
     {
-        UIManager.Instance.ContrlDialogPage();
-        if (TaskManager.Instance.JudgeTaskFinsh(NPC_ID))
+        if (TaskManager.Instance.JudgeTaskFinsh(Task_ID))
         {
-            UIManager.Instance.mDialog.Init(NPC_ID+1);
+            UIManager.Instance.ContrlDialogPage();
+            UIManager.Instance.mDialog.Init(NPC_ID + 1);
             UIManager.Instance.mDialog.GetAudioFormNPC(FinshTaskAudio);
-            Debug.Log("FinshTaskAudio");
         }
-        else if (TaskManager.Instance.JudgeTaskReceive(NPC_ID) == false)
+        else if (TaskManager.Instance.JudgeTaskReceive(Task_ID) == false)
         {
+            UIManager.Instance.ContrlDialogPage();
             UIManager.Instance.mDialog.Init(NPC_ID);
             UIManager.Instance.mDialog.GetAudioFormNPC(RecieveTaskAudio);
+        }
+        else
+        {
+            return;
         }
     }
     private void OnTriggerExit(Collider other)

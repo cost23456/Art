@@ -51,7 +51,7 @@ public class TaskManager : Singleton<TaskManager>
     {
         foreach (var task in taskDatas)
         {
-            if (task.isReceive)
+            if (task.isReceive && task.isSuccess==false)
             {
                  return task;    
             }

@@ -10,7 +10,6 @@ public class wenbenchat : MonoBehaviour
     public  bool isDialogCompleted = false;
     //组件
     public List<TextAsset> textAsset;
-    public Text nameText; // 改名避免和关键字冲突
     public Text duihua;
     private List<string> dialogueList = new List<string>();
     private List<AudioClip> audioClips = new List<AudioClip>();
@@ -19,6 +18,12 @@ public class wenbenchat : MonoBehaviour
     private void Awake()
     {
         this.mAudioSource = GetComponent<AudioSource>();
+    }
+    private void OnEnable()
+    {
+        this.mAudioClipIndex = 0;
+        this.mDialogIndex = 0;
+        this.isDialogCompleted = false;
     }
     void Update()
     {
@@ -98,12 +103,10 @@ public class wenbenchat : MonoBehaviour
         switch (dialogueList[mDialogIndex])
         {
             case "A：":
-                this.nameText.text = "名字1";
                 Debug.Log("切换为角色A"); // 调试用
                 this.mDialogIndex++;
                 break;
             case "B：":
-                this.nameText.text = "名字2";
                 Debug.Log("切换为角色B"); // 调试用
                 this.mDialogIndex++;
                 this.ChangeAudioIndex();
