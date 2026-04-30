@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: a0f7b87617926b54ab1b4701522c73ad
+ModelImporter:
+  serializedVersion: 22361
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    aCLCompressionLevel: 3
+    aCLCurvePrecision: 0.01
+    aCLFastSampleMode: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+    tuanjieGIEnable: 0
+    tuanjieGIGenSDFFactor: 1
+    tuanjieGIGenSDFBias: 0.25
+    tuanjieGIDoubleSidedMode: 0
+    tuanjieGIGenFacetNums: 12
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    totalVerticesCount: 132131
+    totalTrianglesCount: 80834
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  virtualGeometry:
+    virtualGeometry: 0
+    hasBoneWeight: 0
+    useTransparent: 0
+    setVGForeachMesh: 0
+    isFirstUse: 1
+    virtualGeometrySettings:
+      generateGeometryBuffer: 0
+      surfaceCompensation: 0
+      allMeshUse: 1
+      ignoreSimpleMesh: 0
+      transformScaleState: 0
+      isPossibleOverflow: 0
+    virtualGeometryPlatformSettings:
+    - serializedVersion: 0
+      overridden: 0
+      ignorePlatformSupport: 0
+      buildTarget: DefaultVirtualGeometryPlatform
+      positionPrecision: -2147483648
+      normalPrecision: -2147483648
+      tangentPrecision: -2147483648
+      detailedTriangleCount: 0
+      detailedVertexCount: 0
+      rootPageSize: 0
+      streamablePageSize: 0
+      reserveTrianglePercent: 100
+      reserveDetailLevel: 0
+    - serializedVersion: 0
+      overridden: 0
+      ignorePlatformSupport: 0
+      buildTarget: Standalone
+      positionPrecision: -2147483648
+      normalPrecision: -2147483648
+      tangentPrecision: -2147483648
+      detailedTriangleCount: 0
+      detailedVertexCount: 0
+      rootPageSize: 0
+      streamablePageSize: 0
+      reserveTrianglePercent: 100
+      reserveDetailLevel: 0
+    - serializedVersion: 0
+      overridden: 0
+      ignorePlatformSupport: 0
+      buildTarget: iPhone
+      positionPrecision: -2147483648
+      normalPrecision: -2147483648
+      tangentPrecision: -2147483648
+      detailedTriangleCount: 0
+      detailedVertexCount: 0
+      rootPageSize: 0
+      streamablePageSize: 0
+      reserveTrianglePercent: 100
+      reserveDetailLevel: 0
+    - serializedVersion: 0
+      overridden: 0
+      ignorePlatformSupport: 0
+      buildTarget: Android
+      positionPrecision: -2147483648
+      normalPrecision: -2147483648
+      tangentPrecision: -2147483648
+      detailedTriangleCount: 0
+      detailedVertexCount: 0
+      rootPageSize: 0
+      streamablePageSize: 0
+      reserveTrianglePercent: 100
+      reserveDetailLevel: 0
+    selectedVGMeshes:
+    - index: 0
+      meshName: qingmo_obj_196 [5145181]
+      meshGeometryBuffer: 0
+    - index: 1
+      meshName: qingmo_obj_197 [5145184]
+      meshGeometryBuffer: 0
+    - index: 2
+      meshName: qingmo_obj_198 [5145187]
+      meshGeometryBuffer: 0
+    - index: 3
+      meshName: qingmo_obj_199 [5145190]
+      meshGeometryBuffer: 0
+    - index: 4
+      meshName: qingmo_obj_200 [5145193]
+      meshGeometryBuffer: 0
+    - index: 5
+      meshName: qingmo_obj_201 [5145196]
+      meshGeometryBuffer: 0
+    - index: 6
+      meshName: qingmo_obj_202 [5145199]
+      meshGeometryBuffer: 0
+    - index: 7
+      meshName: qingmo_obj_203 [5145202]
+      meshGeometryBuffer: 0
+    - index: 8
+      meshName: qingmo_obj_204 [5145205]
+      meshGeometryBuffer: 0
+    - index: 9
+      meshName: qingmo_obj_205 [5145208]
+      meshGeometryBuffer: 0
+    - index: 10
+      meshName: qingmo_obj_206 [5145211]
+      meshGeometryBuffer: 0
+    - index: 11
+      meshName: qingmo_obj_207 [5145214]
+      meshGeometryBuffer: 0
+    - index: 12
+      meshName: qingmo_obj_208 [5145217]
+      meshGeometryBuffer: 0
+    - index: 13
+      meshName: qingmo_obj_209 [5145220]
+      meshGeometryBuffer: 0
+    - index: 14
+      meshName: qingmo_obj_210 [5145223]
+      meshGeometryBuffer: 0
+    - index: 15
+      meshName: qingmo_obj_211 [5145226]
+      meshGeometryBuffer: 0
+    - index: 16
+      meshName: qingmo_obj_212 [5145229]
+      meshGeometryBuffer: 0
+    - index: 17
+      meshName: qingmo_obj_213 [5145232]
+      meshGeometryBuffer: 0
+    - index: 18
+      meshName: qingmo_obj_214 [5145235]
+      meshGeometryBuffer: 0
+    - index: 19
+      meshName: qingmo_obj_215 [5145238]
+      meshGeometryBuffer: 0
+    - index: 20
+      meshName: qingmo_obj_216 [5145241]
+      meshGeometryBuffer: 0
+    - index: 21
+      meshName: qingmo_obj_217 [5145244]
+      meshGeometryBuffer: 0
+    - index: 22
+      meshName: qingmo_obj_218 [5145247]
+      meshGeometryBuffer: 0
+    - index: 23
+      meshName: qingmo_obj_219 [5145250]
+      meshGeometryBuffer: 0
+    - index: 24
+      meshName: qingmo_obj_220 [5145253]
+      meshGeometryBuffer: 0
+    - index: 25
+      meshName: qingmo_obj_221 [5145256]
+      meshGeometryBuffer: 0
+    - index: 26
+      meshName: qingmo_obj_222 [5145259]
+      meshGeometryBuffer: 0
+    - index: 27
+      meshName: qingmo_obj_223 [5145262]
+      meshGeometryBuffer: 0
+    - index: 28
+      meshName: qingmo_obj_224 [5145265]
+      meshGeometryBuffer: 0
+    - index: 29
+      meshName: qingmo_obj_225 [5145268]
+      meshGeometryBuffer: 0
+    - index: 30
+      meshName: qingmo_obj_226 [5145271]
+      meshGeometryBuffer: 0
+    - index: 31
+      meshName: qingmo_obj_227 [5145274]
+      meshGeometryBuffer: 0
+    - index: 32
+      meshName: qingmo_obj_228 [5145277]
+      meshGeometryBuffer: 0
+    - index: 33
+      meshName: qingmo_obj_229 [5145280]
+      meshGeometryBuffer: 0
+    - index: 34
+      meshName: qingmo_obj_230 [5145283]
+      meshGeometryBuffer: 0
+    - index: 35
+      meshName: qingmo_obj_231 [5145286]
+      meshGeometryBuffer: 0
+    - index: 36
+      meshName: qingmo_obj_232 [5145289]
+      meshGeometryBuffer: 0
+    - index: 37
+      meshName: qingmo_obj_233 [5145292]
+      meshGeometryBuffer: 0
+    - index: 38
+      meshName: qingmo_obj_234 [5145295]
+      meshGeometryBuffer: 0
+    - index: 39
+      meshName: qingmo_obj_235 [5145298]
+      meshGeometryBuffer: 0
+    - index: 40
+      meshName: qingmo_obj_236 [5145301]
+      meshGeometryBuffer: 0
+    - index: 41
+      meshName: qingmo_obj_237 [5145304]
+      meshGeometryBuffer: 0
+    - index: 42
+      meshName: qingmo_obj_238 [5145307]
+      meshGeometryBuffer: 0
+    - index: 43
+      meshName: qingmo_obj_239 [5145310]
+      meshGeometryBuffer: 0
+    - index: 44
+      meshName: qingmo_obj_240 [5145313]
+      meshGeometryBuffer: 0
+    - index: 45
+      meshName: qingmo_obj_241 [5145316]
+      meshGeometryBuffer: 0
+    - index: 46
+      meshName: qingmo_obj_242 [5145319]
+      meshGeometryBuffer: 0
+    - index: 47
+      meshName: qingmo_obj_243 [5145322]
+      meshGeometryBuffer: 0
+    - index: 48
+      meshName: qingmo_obj_244 [5145325]
+      meshGeometryBuffer: 0
+    - index: 49
+      meshName: qingmo_obj_245 [5145328]
+      meshGeometryBuffer: 0
+    - index: 50
+      meshName: qingmo_obj_246 [5145331]
+      meshGeometryBuffer: 0
+    - index: 51
+      meshName: qingmo_obj_247 [5145334]
+      meshGeometryBuffer: 0
+    - index: 52
+      meshName: qingmo_obj_248 [5145337]
+      meshGeometryBuffer: 0
+    - index: 53
+      meshName: qingmo_obj_681 [3050108]
+      meshGeometryBuffer: 0
+    - index: 54
+      meshName: qingmo_obj_682 [3050111]
+      meshGeometryBuffer: 0
+    - index: 55
+      meshName: qingmo_obj_683 [3050114]
+      meshGeometryBuffer: 0
+    - index: 56
+      meshName: qingmo_obj_684 [3050117]
+      meshGeometryBuffer: 0
+    - index: 57
+      meshName: qingmo_obj_685 [3050120]
+      meshGeometryBuffer: 0
+    - index: 58
+      meshName: qingmo_obj_686 [3050123]
+      meshGeometryBuffer: 0
+    - index: 59
+      meshName: qingmo_obj_687 [3050126]
+      meshGeometryBuffer: 0
+    - index: 60
+      meshName: qingmo_obj_688 [3050129]
+      meshGeometryBuffer: 0
+    - index: 61
+      meshName: qingmo_obj_689 [3050132]
+      meshGeometryBuffer: 0
+    - index: 62
+      meshName: qingmo_obj_690 [3050135]
+      meshGeometryBuffer: 0
+    - index: 63
+      meshName: qingmo_obj_691 [3050138]
+      meshGeometryBuffer: 0
+    - index: 64
+      meshName: qingmo_obj_692 [3050141]
+      meshGeometryBuffer: 0
+    - index: 65
+      meshName: qingmo_obj_693 [3050144]
+      meshGeometryBuffer: 0
+    - index: 66
+      meshName: qingmo_obj_694 [3050147]
+      meshGeometryBuffer: 0
+    - index: 67
+      meshName: qingmo_obj_695 [3050150]
+      meshGeometryBuffer: 0
+    - index: 68
+      meshName: qingmo_obj_696 [3050153]
+      meshGeometryBuffer: 0
+    - index: 69
+      meshName: qingmo_obj_697 [3050156]
+      meshGeometryBuffer: 0
+    - index: 70
+      meshName: qingmo_obj_698 [3050159]
+      meshGeometryBuffer: 0
+    - index: 71
+      meshName: qingmo_obj_699 [3050162]
+      meshGeometryBuffer: 0
+    - index: 72
+      meshName: qingmo_obj_700 [3050165]
+      meshGeometryBuffer: 0
+    - index: 73
+      meshName: qingmo_obj_701 [3050168]
+      meshGeometryBuffer: 0
+    - index: 74
+      meshName: qingmo_obj_702 [3050171]
+      meshGeometryBuffer: 0
+    - index: 75
+      meshName: qingmo_obj_703 [3050174]
+      meshGeometryBuffer: 0
+    - index: 76
+      meshName: qingmo_obj_704 [3050177]
+      meshGeometryBuffer: 0
+    - index: 77
+      meshName: qingmo_obj_705 [3050180]
+      meshGeometryBuffer: 0
+    - index: 78
+      meshName: qingmo_obj_706 [3050183]
+      meshGeometryBuffer: 0
+    - index: 79
+      meshName: qingmo_obj_707 [3050186]
+      meshGeometryBuffer: 0
+    - index: 80
+      meshName: qingmo_obj_708 [3050189]
+      meshGeometryBuffer: 0
+    - index: 81
+      meshName: qingmo_obj_709 [3050192]
+      meshGeometryBuffer: 0
+    - index: 82
+      meshName: qingmo_obj_710 [3050195]
+      meshGeometryBuffer: 0
+    - index: 83
+      meshName: qingmo_obj_711 [3050198]
+      meshGeometryBuffer: 0
+    - index: 84
+      meshName: qingmo_obj_712 [3050201]
+      meshGeometryBuffer: 0
+    - index: 85
+      meshName: qingmo_obj_713 [3050204]
+      meshGeometryBuffer: 0
+    - index: 86
+      meshName: qingmo_obj_714 [3050207]
+      meshGeometryBuffer: 0
+    - index: 87
+      meshName: qingmo_obj_715 [3050210]
+      meshGeometryBuffer: 0
+    - index: 88
+      meshName: qingmo_obj_716 [3050213]
+      meshGeometryBuffer: 0
+    - index: 89
+      meshName: qingmo_obj_717 [3050216]
+      meshGeometryBuffer: 0
+    - index: 90
+      meshName: qingmo_obj_718 [3050219]
+      meshGeometryBuffer: 0
+    - index: 91
+      meshName: qingmo_obj_719 [3050222]
+      meshGeometryBuffer: 0
+    - index: 92
+      meshName: qingmo_obj_720 [3050225]
+      meshGeometryBuffer: 0
+    - index: 93
+      meshName: qingmo_obj_721 [3050228]
+      meshGeometryBuffer: 0
+    - index: 94
+      meshName: qingmo_obj_722 [3050231]
+      meshGeometryBuffer: 0
+    - index: 95
+      meshName: qingmo_obj_723 [3050234]
+      meshGeometryBuffer: 0
+    - index: 96
+      meshName: qingmo_obj_724 [3050237]
+      meshGeometryBuffer: 0
+    - index: 97
+      meshName: qingmo_obj_725 [3050240]
+      meshGeometryBuffer: 0
+    - index: 98
+      meshName: qingmo_obj_726 [3050243]
+      meshGeometryBuffer: 0
+    - index: 99
+      meshName: qingmo_obj_727 [3050246]
+      meshGeometryBuffer: 0
+    - index: 100
+      meshName: qingmo_obj_728 [3050249]
+      meshGeometryBuffer: 0
+    - index: 101
+      meshName: qingmo_obj_729 [3050252]
+      meshGeometryBuffer: 0
+    - index: 102
+      meshName: qingmo_obj_730 [3050255]
+      meshGeometryBuffer: 0
+    - index: 103
+      meshName: qingmo_obj_731 [3050258]
+      meshGeometryBuffer: 0
+    - index: 104
+      meshName: qingmo_obj_732 [3050261]
+      meshGeometryBuffer: 0
+    - index: 105
+      meshName: qingmo_obj_733 [3050264]
+      meshGeometryBuffer: 0
+    - index: 106
+      meshName: qingmo_obj_734 [3050267]
+      meshGeometryBuffer: 0
+    - index: 107
+      meshName: qingmo_obj_735 [3050270]
+      meshGeometryBuffer: 0
+    - index: 108
+      meshName: qingmo_obj_736 [3050273]
+      meshGeometryBuffer: 0
+    - index: 109
+      meshName: qingmo_obj_737 [3050276]
+      meshGeometryBuffer: 0
+    - index: 110
+      meshName: qingmo_obj_738 [3050279]
+      meshGeometryBuffer: 0
+    - index: 111
+      meshName: qingmo_obj_739 [3050282]
+      meshGeometryBuffer: 0
+    - index: 112
+      meshName: qingmo_obj_740 [3050285]
+      meshGeometryBuffer: 0
+    - index: 113
+      meshName: qingmo_obj_741 [3050288]
+      meshGeometryBuffer: 0
+    - index: 114
+      meshName: qingmo_obj_742 [3050291]
+      meshGeometryBuffer: 0
+    - index: 115
+      meshName: qingmo_obj_743 [3050294]
+      meshGeometryBuffer: 0
+    - index: 116
+      meshName: qingmo_obj_744 [3050297]
+      meshGeometryBuffer: 0
+    - index: 117
+      meshName: qingmo_obj_745 [3050300]
+      meshGeometryBuffer: 0
+    - index: 118
+      meshName: qingmo_obj_746 [5145356]
+      meshGeometryBuffer: 0
+    supportVGMeshes:
+    - index: 0
+      meshName: qingmo_obj_196 [5145181]
+      meshGeometryBuffer: 0
+    - index: 1
+      meshName: qingmo_obj_197 [5145184]
+      meshGeometryBuffer: 0
+    - index: 2
+      meshName: qingmo_obj_198 [5145187]
+      meshGeometryBuffer: 0
+    - index: 3
+      meshName: qingmo_obj_199 [5145190]
+      meshGeometryBuffer: 0
+    - index: 4
+      meshName: qingmo_obj_200 [5145193]
+      meshGeometryBuffer: 0
+    - index: 5
+      meshName: qingmo_obj_201 [5145196]
+      meshGeometryBuffer: 0
+    - index: 6
+      meshName: qingmo_obj_202 [5145199]
+      meshGeometryBuffer: 0
+    - index: 7
+      meshName: qingmo_obj_203 [5145202]
+      meshGeometryBuffer: 0
+    - index: 8
+      meshName: qingmo_obj_204 [5145205]
+      meshGeometryBuffer: 0
+    - index: 9
+      meshName: qingmo_obj_205 [5145208]
+      meshGeometryBuffer: 0
+    - index: 10
+      meshName: qingmo_obj_206 [5145211]
+      meshGeometryBuffer: 0
+    - index: 11
+      meshName: qingmo_obj_207 [5145214]
+      meshGeometryBuffer: 0
+    - index: 12
+      meshName: qingmo_obj_208 [5145217]
+      meshGeometryBuffer: 0
+    - index: 13
+      meshName: qingmo_obj_209 [5145220]
+      meshGeometryBuffer: 0
+    - index: 14
+      meshName: qingmo_obj_210 [5145223]
+      meshGeometryBuffer: 0
+    - index: 15
+      meshName: qingmo_obj_211 [5145226]
+      meshGeometryBuffer: 0
+    - index: 16
+      meshName: qingmo_obj_212 [5145229]
+      meshGeometryBuffer: 0
+    - index: 17
+      meshName: qingmo_obj_213 [5145232]
+      meshGeometryBuffer: 0
+    - index: 18
+      meshName: qingmo_obj_214 [5145235]
+      meshGeometryBuffer: 0
+    - index: 19
+      meshName: qingmo_obj_215 [5145238]
+      meshGeometryBuffer: 0
+    - index: 20
+      meshName: qingmo_obj_216 [5145241]
+      meshGeometryBuffer: 0
+    - index: 21
+      meshName: qingmo_obj_217 [5145244]
+      meshGeometryBuffer: 0
+    - index: 22
+      meshName: qingmo_obj_218 [5145247]
+      meshGeometryBuffer: 0
+    - index: 23
+      meshName: qingmo_obj_219 [5145250]
+      meshGeometryBuffer: 0
+    - index: 24
+      meshName: qingmo_obj_220 [5145253]
+      meshGeometryBuffer: 0
+    - index: 25
+      meshName: qingmo_obj_221 [5145256]
+      meshGeometryBuffer: 0
+    - index: 26
+      meshName: qingmo_obj_222 [5145259]
+      meshGeometryBuffer: 0
+    - index: 27
+      meshName: qingmo_obj_223 [5145262]
+      meshGeometryBuffer: 0
+    - index: 28
+      meshName: qingmo_obj_224 [5145265]
+      meshGeometryBuffer: 0
+    - index: 29
+      meshName: qingmo_obj_225 [5145268]
+      meshGeometryBuffer: 0
+    - index: 30
+      meshName: qingmo_obj_226 [5145271]
+      meshGeometryBuffer: 0
+    - index: 31
+      meshName: qingmo_obj_227 [5145274]
+      meshGeometryBuffer: 0
+    - index: 32
+      meshName: qingmo_obj_228 [5145277]
+      meshGeometryBuffer: 0
+    - index: 33
+      meshName: qingmo_obj_229 [5145280]
+      meshGeometryBuffer: 0
+    - index: 34
+      meshName: qingmo_obj_230 [5145283]
+      meshGeometryBuffer: 0
+    - index: 35
+      meshName: qingmo_obj_231 [5145286]
+      meshGeometryBuffer: 0
+    - index: 36
+      meshName: qingmo_obj_232 [5145289]
+      meshGeometryBuffer: 0
+    - index: 37
+      meshName: qingmo_obj_233 [5145292]
+      meshGeometryBuffer: 0
+    - index: 38
+      meshName: qingmo_obj_234 [5145295]
+      meshGeometryBuffer: 0
+    - index: 39
+      meshName: qingmo_obj_235 [5145298]
+      meshGeometryBuffer: 0
+    - index: 40
+      meshName: qingmo_obj_236 [5145301]
+      meshGeometryBuffer: 0
+    - index: 41
+      meshName: qingmo_obj_237 [5145304]
+      meshGeometryBuffer: 0
+    - index: 42
+      meshName: qingmo_obj_238 [5145307]
+      meshGeometryBuffer: 0
+    - index: 43
+      meshName: qingmo_obj_239 [5145310]
+      meshGeometryBuffer: 0
+    - index: 44
+      meshName: qingmo_obj_240 [5145313]
+      meshGeometryBuffer: 0
+    - index: 45
+      meshName: qingmo_obj_241 [5145316]
+      meshGeometryBuffer: 0
+    - index: 46
+      meshName: qingmo_obj_242 [5145319]
+      meshGeometryBuffer: 0
+    - index: 47
+      meshName: qingmo_obj_243 [5145322]
+      meshGeometryBuffer: 0
+    - index: 48
+      meshName: qingmo_obj_244 [5145325]
+      meshGeometryBuffer: 0
+    - index: 49
+      meshName: qingmo_obj_245 [5145328]
+      meshGeometryBuffer: 0
+    - index: 50
+      meshName: qingmo_obj_246 [5145331]
+      meshGeometryBuffer: 0
+    - index: 51
+      meshName: qingmo_obj_247 [5145334]
+      meshGeometryBuffer: 0
+    - index: 52
+      meshName: qingmo_obj_248 [5145337]
+      meshGeometryBuffer: 0
+    - index: 53
+      meshName: qingmo_obj_681 [3050108]
+      meshGeometryBuffer: 0
+    - index: 54
+      meshName: qingmo_obj_682 [3050111]
+      meshGeometryBuffer: 0
+    - index: 55
+      meshName: qingmo_obj_683 [3050114]
+      meshGeometryBuffer: 0
+    - index: 56
+      meshName: qingmo_obj_684 [3050117]
+      meshGeometryBuffer: 0
+    - index: 57
+      meshName: qingmo_obj_685 [3050120]
+      meshGeometryBuffer: 0
+    - index: 58
+      meshName: qingmo_obj_686 [3050123]
+      meshGeometryBuffer: 0
+    - index: 59
+      meshName: qingmo_obj_687 [3050126]
+      meshGeometryBuffer: 0
+    - index: 60
+      meshName: qingmo_obj_688 [3050129]
+      meshGeometryBuffer: 0
+    - index: 61
+      meshName: qingmo_obj_689 [3050132]
+      meshGeometryBuffer: 0
+    - index: 62
+      meshName: qingmo_obj_690 [3050135]
+      meshGeometryBuffer: 0
+    - index: 63
+      meshName: qingmo_obj_691 [3050138]
+      meshGeometryBuffer: 0
+    - index: 64
+      meshName: qingmo_obj_692 [3050141]
+      meshGeometryBuffer: 0
+    - index: 65
+      meshName: qingmo_obj_693 [3050144]
+      meshGeometryBuffer: 0
+    - index: 66
+      meshName: qingmo_obj_694 [3050147]
+      meshGeometryBuffer: 0
+    - index: 67
+      meshName: qingmo_obj_695 [3050150]
+      meshGeometryBuffer: 0
+    - index: 68
+      meshName: qingmo_obj_696 [3050153]
+      meshGeometryBuffer: 0
+    - index: 69
+      meshName: qingmo_obj_697 [3050156]
+      meshGeometryBuffer: 0
+    - index: 70
+      meshName: qingmo_obj_698 [3050159]
+      meshGeometryBuffer: 0
+    - index: 71
+      meshName: qingmo_obj_699 [3050162]
+      meshGeometryBuffer: 0
+    - index: 72
+      meshName: qingmo_obj_700 [3050165]
+      meshGeometryBuffer: 0
+    - index: 73
+      meshName: qingmo_obj_701 [3050168]
+      meshGeometryBuffer: 0
+    - index: 74
+      meshName: qingmo_obj_702 [3050171]
+      meshGeometryBuffer: 0
+    - index: 75
+      meshName: qingmo_obj_703 [3050174]
+      meshGeometryBuffer: 0
+    - index: 76
+      meshName: qingmo_obj_704 [3050177]
+      meshGeometryBuffer: 0
+    - index: 77
+      meshName: qingmo_obj_705 [3050180]
+      meshGeometryBuffer: 0
+    - index: 78
+      meshName: qingmo_obj_706 [3050183]
+      meshGeometryBuffer: 0
+    - index: 79
+      meshName: qingmo_obj_707 [3050186]
+      meshGeometryBuffer: 0
+    - index: 80
+      meshName: qingmo_obj_708 [3050189]
+      meshGeometryBuffer: 0
+    - index: 81
+      meshName: qingmo_obj_709 [3050192]
+      meshGeometryBuffer: 0
+    - index: 82
+      meshName: qingmo_obj_710 [3050195]
+      meshGeometryBuffer: 0
+    - index: 83
+      meshName: qingmo_obj_711 [3050198]
+      meshGeometryBuffer: 0
+    - index: 84
+      meshName: qingmo_obj_712 [3050201]
+      meshGeometryBuffer: 0
+    - index: 85
+      meshName: qingmo_obj_713 [3050204]
+      meshGeometryBuffer: 0
+    - index: 86
+      meshName: qingmo_obj_714 [3050207]
+      meshGeometryBuffer: 0
+    - index: 87
+      meshName: qingmo_obj_715 [3050210]
+      meshGeometryBuffer: 0
+    - index: 88
+      meshName: qingmo_obj_716 [3050213]
+      meshGeometryBuffer: 0
+    - index: 89
+      meshName: qingmo_obj_717 [3050216]
+      meshGeometryBuffer: 0
+    - index: 90
+      meshName: qingmo_obj_718 [3050219]
+      meshGeometryBuffer: 0
+    - index: 91
+      meshName: qingmo_obj_719 [3050222]
+      meshGeometryBuffer: 0
+    - index: 92
+      meshName: qingmo_obj_720 [3050225]
+      meshGeometryBuffer: 0
+    - index: 93
+      meshName: qingmo_obj_721 [3050228]
+      meshGeometryBuffer: 0
+    - index: 94
+      meshName: qingmo_obj_722 [3050231]
+      meshGeometryBuffer: 0
+    - index: 95
+      meshName: qingmo_obj_723 [3050234]
+      meshGeometryBuffer: 0
+    - index: 96
+      meshName: qingmo_obj_724 [3050237]
+      meshGeometryBuffer: 0
+    - index: 97
+      meshName: qingmo_obj_725 [3050240]
+      meshGeometryBuffer: 0
+    - index: 98
+      meshName: qingmo_obj_726 [3050243]
+      meshGeometryBuffer: 0
+    - index: 99
+      meshName: qingmo_obj_727 [3050246]
+      meshGeometryBuffer: 0
+    - index: 100
+      meshName: qingmo_obj_728 [3050249]
+      meshGeometryBuffer: 0
+    - index: 101
+      meshName: qingmo_obj_729 [3050252]
+      meshGeometryBuffer: 0
+    - index: 102
+      meshName: qingmo_obj_730 [3050255]
+      meshGeometryBuffer: 0
+    - index: 103
+      meshName: qingmo_obj_731 [3050258]
+      meshGeometryBuffer: 0
+    - index: 104
+      meshName: qingmo_obj_732 [3050261]
+      meshGeometryBuffer: 0
+    - index: 105
+      meshName: qingmo_obj_733 [3050264]
+      meshGeometryBuffer: 0
+    - index: 106
+      meshName: qingmo_obj_734 [3050267]
+      meshGeometryBuffer: 0
+    - index: 107
+      meshName: qingmo_obj_735 [3050270]
+      meshGeometryBuffer: 0
+    - index: 108
+      meshName: qingmo_obj_736 [3050273]
+      meshGeometryBuffer: 0
+    - index: 109
+      meshName: qingmo_obj_737 [3050276]
+      meshGeometryBuffer: 0
+    - index: 110
+      meshName: qingmo_obj_738 [3050279]
+      meshGeometryBuffer: 0
+    - index: 111
+      meshName: qingmo_obj_739 [3050282]
+      meshGeometryBuffer: 0
+    - index: 112
+      meshName: qingmo_obj_740 [3050285]
+      meshGeometryBuffer: 0
+    - index: 113
+      meshName: qingmo_obj_741 [3050288]
+      meshGeometryBuffer: 0
+    - index: 114
+      meshName: qingmo_obj_742 [3050291]
+      meshGeometryBuffer: 0
+    - index: 115
+      meshName: qingmo_obj_743 [3050294]
+      meshGeometryBuffer: 0
+    - index: 116
+      meshName: qingmo_obj_744 [3050297]
+      meshGeometryBuffer: 0
+    - index: 117
+      meshName: qingmo_obj_745 [3050300]
+      meshGeometryBuffer: 0
+    - index: 118
+      meshName: qingmo_obj_746 [5145356]
+      meshGeometryBuffer: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  overrideDefaultPose: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    namedPoseList:
+    - name: Default
+      skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    defaultPoseIndex: -1
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

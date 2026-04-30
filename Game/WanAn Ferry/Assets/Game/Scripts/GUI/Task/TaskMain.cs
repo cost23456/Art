@@ -28,7 +28,7 @@ public class TaskMain : MonoBehaviour
     //·½·¨
     private void RefreshTaskText(int aIndex)
     {
-        this.mCurTask = TaskManager.GetSingleton().GetTask(aIndex);
+        this.mCurTask = TaskManager.Instance.GetTask(aIndex);
         this.mEleDesc.RefreshAll(mCurTask);
         this.mEleReward.RefreshAll(mCurTask);
         this.mEleAtt.RefreshAll(mCurTask);

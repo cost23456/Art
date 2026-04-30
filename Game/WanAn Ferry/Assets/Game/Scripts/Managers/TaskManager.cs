@@ -2,23 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskManager : MonoBehaviour
+public class TaskManager : Singleton<TaskManager>
 {
     public List<TaskData> taskDatas;
-    private static TaskManager Instance;
-    private void Awake()
-    {
-        Instance = this;
-    }
-    public static TaskManager GetSingleton()
-    {
-        if (Instance == null)
-        {
-            Instance = FindObjectOfType<TaskManager>();
-            return Instance;
-        }
-        return Instance;
-    }
+    public List<TaskItem> taskItems;
+    
     //获取任务数据
     public TaskData GetTask(int aTask_ID)
     {

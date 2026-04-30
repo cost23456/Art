@@ -4,19 +4,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScenesManager : MonoBehaviour
+public class ScenesManager : Singleton<ScenesManager>
 {
     private TGUIRef mTRef;
     public Slider progressBar;
     public Text progressText;
     public float loadSpeed = 0.5f;
     public GameObject Loadscenes;
-    private void Awake()
-    {
-        this.mTRef = this.GetComponent<TGUIRef>();
-    }
+
     private void Start()
     {
+        this.mTRef = this.GetComponent<TGUIRef>();
         foreach (GameObject obj in mTRef.RefList)
         {
             DontDestroyOnLoad(obj);

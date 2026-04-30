@@ -17,5 +17,5 @@ public class Main: MonoBehaviour
     {
         this.gameObject.SetActive(false);
         LoadScenes.SetActive(true);
-}
+    }
 }

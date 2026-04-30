@@ -1,34 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class TaskItem : MonoBehaviour
 {
     public TaskItemData mItemData;
+    public GameObject MainObject;
+    public int TaskReward_ID;
     //生命周期
-    private void Start()
+    private void Update()
     {
-       
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        //TODO：打开UI
+        if (TaskManager.Instance.JudgeTaskFinsh((mItemData.TaskItemData_ID)))
+        {
+            return;
+        }
+        if (TaskManager.Instance.JudgeTaskReceive(mItemData.TaskItemData_ID) && MainObject != null)
+        {
+            this.MainObject.SetActive(true);
+        }
     }
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             Destroy(this.gameObject);
-            TaskManager.GetSingleton().SetFinishTask(mItemData.TaskItemData_ID);
-            EventManager.OnFinishTask(1);
+            TaskManager.Instance.SetFinishTask(mItemData.TaskItemData_ID);
+            EventManager.OnFinishTask(mItemData.TaskItemData_ID);
+            BagManager.Instance.AddBagItem(TaskReward_ID);
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        //TODO：关闭UI
-    }
-    private void OnDestroy()
-    {
     }
 }
