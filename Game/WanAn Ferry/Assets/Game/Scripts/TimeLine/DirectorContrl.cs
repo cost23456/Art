@@ -13,7 +13,7 @@ public class DirectorContrl : MonoBehaviour
         {
             director.initialTime = 0;
         }
-        this.ContrlDirectors(0);
+        this.cinemachineBrain.enabled = false;
     }
     public void ContrlDirectors(int aIndex)
     {

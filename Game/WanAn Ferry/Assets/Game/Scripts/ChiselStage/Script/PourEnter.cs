@@ -12,6 +12,9 @@ public class PourEnter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
+
+        }
             inArea = true;
     }
 
@@ -30,9 +33,9 @@ public class PourEnter : MonoBehaviour
             cam1.SetActive(true);
             player.SetActive(false);
 
-            // 锁定鼠标
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            //// 锁定鼠标
+            //Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
         }
     }
 }

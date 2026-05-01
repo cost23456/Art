@@ -26,6 +26,7 @@ public class TaskItem : MonoBehaviour
             TaskManager.Instance.SetFinishTask(mItemData.TaskItemData_ID);
             EventManager.OnFinishTask(mItemData.TaskItemData_ID);
             BagManager.Instance.AddBagItem(TaskReward_ID);
+            UIManager.Instance.ContrlPromote(7);
         }
     }
 }

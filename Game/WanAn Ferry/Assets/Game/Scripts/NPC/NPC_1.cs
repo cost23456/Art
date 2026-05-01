@@ -13,7 +13,11 @@ public class NPC_1 : MonoBehaviour
     //ÉúÃüÖÜÆÚ
     private void OnTriggerEnter(Collider other)
     {
-        if (TaskManager.Instance.JudgeTaskFinsh(Task_ID))
+        if (TaskManager.Instance.JudgeTaskFinsh(4) == true)
+        {
+            UIManager.Instance.ContrlPromote(6);
+        }
+        else if (TaskManager.Instance.JudgeTaskFinsh(Task_ID))
         {
             UIManager.Instance.ContrlDialogPage();
             UIManager.Instance.mDialog.Init(NPC_ID + 1);

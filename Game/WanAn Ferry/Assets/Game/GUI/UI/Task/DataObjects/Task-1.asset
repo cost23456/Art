@@ -19,5 +19,5 @@ MonoBehaviour:
   Reward_Info: []
   Item_ID: 
   Item_Count: 
-  isSuccess: 0
-  isReceive: 0
+  isSuccess: 1
+  isReceive: 1

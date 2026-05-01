@@ -1,64 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+
 public class Kuai : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // Start is called before the first frame update
     private RectTransform rectTransform;
-    private Vector3 originalposition;
+    private Vector3 originalPosition;
     public int x_index;
     public int y_indy;
     private Puzzle pingtu;
-    
-    void Start()
+    private bool isRight;
+
+    private void Awake()
     {
-       
         rectTransform = GetComponent<RectTransform>();
-        originalposition = rectTransform.anchoredPosition;
+    }
+
+    private void Start()
+    {
         pingtu = FindObjectOfType<Puzzle>();
     }
+
+    public void SetOriginalPos(Vector2 pos)
+    {
+        originalPosition = pos;
+        rectTransform.anchoredPosition = pos;
+    }
+
     public void Initialize(int x, int y)
     {
         x_index = x;
         y_indy = y;
-
     }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        isRight = false;
+        Debug.Log("开始拖动！！！");
     }
+
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / GetComponentInParent<Canvas>().scaleFactor;
     }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         if (IsInCorrectPosittion())
         {
             rectTransform.anchoredPosition = pingtu.GetCorrectPosition(x_index, y_indy);
-         
-            
+            if (!isRight)
+            {
+                isRight = true;
+                pingtu.OnePieceCorrect();
+            }
         }
         else
         {
-            rectTransform.anchoredPosition = originalposition;
+            rectTransform.anchoredPosition = originalPosition;
+            isRight = false;
         }
-        
-        //rectTransform.anchoredPosition = originalposition;
     }
 
     private bool IsInCorrectPosittion()
     {
-        bool isMath =
-            Mathf.Abs(rectTransform.anchoredPosition.x - pingtu.GetCorrectPosition(x_index, y_indy).x) < 100f
-            && Mathf.Abs(rectTransform.anchoredPosition.y - pingtu.GetCorrectPosition(x_index, y_indy).y) < 100f;
-        return isMath;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        return Mathf.Abs(rectTransform.anchoredPosition.x - pingtu.GetCorrectPosition(x_index, y_indy).x) < 100f
+               && Mathf.Abs(rectTransform.anchoredPosition.y - pingtu.GetCorrectPosition(x_index, y_indy).y) < 100f;
     }
 }

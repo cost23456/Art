@@ -24,6 +24,7 @@ public class UIManager : Singleton<UIManager>
     public CameraControl mMainCamera;
     public GameObject Icon;
     public GameObject mStartGame;
+    public GameObject mPuzzle;
     public List<GameObject> mTips;
     public List<GameObject> mPromote;
     //ÉúÃüÖÜÆÚ
@@ -203,10 +204,12 @@ public class UIManager : Singleton<UIManager>
         if(mPromote[aIndex].gameObject.activeSelf == false)
         {
             this.mPromote[aIndex].gameObject.SetActive(true);
+            this.ShowCursorForUI(true);
         }
         else if (mPromote[aIndex].gameObject.activeSelf == true)
         {
             this.mPromote[aIndex].gameObject.SetActive(false);
+            this.ShowCursorForUI(false);
         }
     }
     public void ContrlStartGame()
@@ -219,6 +222,20 @@ public class UIManager : Singleton<UIManager>
         else if (mStartGame.gameObject.activeSelf == true)
         {
             this.mStartGame.SetActive(false);
+        }
+    }
+    public void ContrlPuzzle()
+    {
+        if (mPuzzle == null) return;
+        if (mPuzzle.gameObject.activeSelf == false)
+        {
+            this.mPuzzle.SetActive(true);
+            this.ShowCursorForUI(true);
+        }
+        else if (mPuzzle.gameObject.activeSelf == true)
+        {
+            this.mPuzzle.SetActive(false);
+            this.ShowCursorForUI(false);
         }
     }
 }

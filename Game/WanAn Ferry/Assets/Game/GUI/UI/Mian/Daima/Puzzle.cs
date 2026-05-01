@@ -1,91 +1,104 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Puzzle : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Texture2D Tupian;
-    public int row = 4;//行
-    public int column = 4;//列
     public GameObject Kuaiss;
-    public GameObject PT;
+    public CanvasGroup mCanvas;
+    private Sequence mDO;
     public Vector3[,] Weiz;
-   // public GameObject over;
-    
-   
-  
-    void Start()
+
+    private int row = 3;
+    private int column = 3;
+    private float uiWidth = 1005f;
+    private float uiHeight = 709f;
+    private int correctCount = 0;
+
+    private void Awake()
     {
-       // over.SetActive(false);
-        Weiz = new Vector3[row, column];
-         CreatPuzzle();
-        PrintAllCorrectPos();
+        mCanvas = GetComponent<CanvasGroup>();
+        mCanvas.blocksRaycasts = true; // 必须开！
+        mCanvas.interactable = true;
     }
+
     private void OnEnable()
     {
-       
-
+        correctCount = 0;
     }
+    private void Start()
+    {
+        Weiz = new Vector3[row, column];
+        CreatPuzzle();
+    }
+
     void CreatPuzzle()
     {
-        int Kuaiwidth = Tupian.width / column;
-        int KuaiHeight = Tupian.height / row;
+        float pieceW = uiWidth / column;
+        float pieceH = uiHeight / row;
+        float texW = Tupian.width;
+        float texH = Tupian.height;
+
         for (int y = 0; y < row; y++)
         {
             for (int x = 0; x < column; x++)
             {
-                Texture2D piece = new Texture2D(Kuaiwidth, KuaiHeight);
-                piece.SetPixels(Tupian.GetPixels(x * Kuaiwidth, y * KuaiHeight, Kuaiwidth, KuaiHeight));
+                Rect rect = new Rect(
+                    x * pieceW / uiWidth * texW,
+                    y * pieceH / uiHeight * texH,
+                    pieceW / uiWidth * texW,
+                    pieceH / uiHeight * texH
+                );
 
-                piece.Apply();
-                GameObject Kuais = Instantiate(Kuaiss, this.transform);
-                Kuais.GetComponent<Image>().sprite = Sprite.Create(piece, new Rect(0, 0, Kuaiwidth, KuaiHeight), new Vector2(0.5f, 0.5f));
-                Kuais.GetComponent<Kuai>().Initialize(x, y);
-                Kuais.GetComponent<RectTransform>().anchoredPosition =
-                        new Vector2(Random.Range(-40f, 840f), Random.Range(-400f, 400f));
+                Sprite sprite = Sprite.Create(Tupian, rect, new Vector2(0.5f, 0.5f));
+                GameObject kuai = Instantiate(Kuaiss, transform);
+
+                Image img = kuai.GetComponent<Image>();
+                img.sprite = sprite;
+                img.rectTransform.sizeDelta = new Vector2(pieceW, pieceH);
+                img.raycastTarget = true; // 强制开启射线
+
+                Kuai k = kuai.GetComponent<Kuai>();
+                k.Initialize(x, y);
+
+                Vector2 randomPos = new Vector2(Random.Range(-40f, 840f), Random.Range(-400f, 400f));
+                k.SetOriginalPos(randomPos);
+
                 RecordRightPos(x, y);
-                // Kuais.GetComponent<RectTransform>().anchoredPosition = Weiz[x, y];
-
             }
         }
     }
-    void RecordRightPos(int x, int y)//正确的位置
-    {
-        Vector2 anchoredposition = PT.GetComponent<RectTransform>().anchoredPosition;
-        Vector2 TP = new Vector2(anchoredposition.x - 300, anchoredposition.y - 300);
-        Weiz[x, y] = new Vector3(TP.x + x * 200, TP.y + y * 200, 0);
 
-    }
-    void PrintAllCorrectPos()
+    void RecordRightPos(int x, int y)
     {
-        for (int y = 0; y < row; y++)
+        float pieceW = 1005f / 3f;
+        float pieceH = 709f / 3f;
+        Weiz[x, y] = new Vector3((x - 1) * pieceW, (y - 1) * pieceH, 0);
+    }
+
+    public Vector3 GetCorrectPosition(int x, int y) => Weiz[x, y];
+
+    public void OnePieceCorrect()
+    {
+        correctCount++;
+        CheckIfAllCorrect();
+    }
+
+    private void CheckIfAllCorrect()
+    {
+        if (correctCount >= 9)
         {
-            for (int x = 0; x < column; x++)
-            {
-                Debug.Log("拼图块 (" + x + "," + y + ") 的正确位置 = " + Weiz[x, y]);
-            }
+            ContrlPuzzle(0);
+            Destroy(gameObject, 1.4f);
+            TaskManager.Instance.SetFinishTask(4);
+            UIManager.Instance.ContrlPromote(5);
         }
     }
 
-    public Vector3 GetCorrectPosition(int x, int y)
+    public void ContrlPuzzle(int target)
     {
-        return Weiz[x, y];
-    }
-    //public void JiShu()
-    //{
-    //    if (a) return;
-    //    b++;
-    //    if (b == 16)
-    //    {
-    //        over.SetActive(true);
-    //        a = true;
-    //        over.transform.SetAsLastSibling();
-    //    }
-    //}
-    private void Update()
-    {
-        
+        DOTween.Kill(mCanvas);
+        mCanvas.DOFade(target, 1f);
     }
 }

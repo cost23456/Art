@@ -1,8 +1,11 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class bg : MonoBehaviour
 {
+    public string Book;
+    public Text LastText;
     private CanvasGroup CanvasGroup;
     private Sequence mDO;
     private void Awake()
@@ -16,8 +19,8 @@ public class bg : MonoBehaviour
             this.mDO?.Kill(true);
             this.mDO = DOTween.Sequence();
             this.CanvasGroup.alpha = 0f;
-            this.mDO.Append(this.CanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.InOutSine));
-            this.mDO.Append(this.CanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.InOutSine));
+            this.mDO.Append(this.CanvasGroup.DOFade(1f, 1f).SetEase(Ease.InOutSine));
+            //this.mDO.Append(this.LastText.DOText(this.Book, 3f));
         }
     }
 }

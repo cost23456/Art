@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks.Triggers;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +12,6 @@ public class HammerGame : MonoBehaviour
 
     [Header("=== UI ===")]
     public Slider barProgress;
-    public GameObject uiSuccessParent;  // Success 父物体
     public Text tipText;                 // 下方横排提示文字
 
     [Header("=== 锤子 Z轴敲打 ===")]
@@ -18,51 +19,67 @@ public class HammerGame : MonoBehaviour
     public float z_Down = 38f;
     public float moveSpeed = 7f;
 
+    public ParticleSystem Eff;
     // 状态
     private bool isCrafting = false;
     private bool isHitting = false;
     private bool isAllDone = false;
 
-    void Start()
+    private void Start()
     {
         // 初始状态
         cam3rd.SetActive(true);
         cam1st.SetActive(false);
-        playerObj.SetActive(true);
-
+        //playerObj.SetActive(true);
+        
         // 开局所有UI隐藏
         barProgress.gameObject.SetActive(false);
-        uiSuccessParent.SetActive(false);
         tipText.gameObject.SetActive(false);
 
         barProgress.minValue = 0;
         barProgress.maxValue = 100;
         barProgress.value = 0;
-
+        this.Eff.Stop();
         transform.localRotation = Quaternion.Euler(0, 0, z_Up);
     }
-
     void Update()
     {
-        // 1. 未完成且未在制作时，按E进入制作
-        if (!isCrafting && !isAllDone && Input.GetKeyDown(KeyCode.E))
-        {
-            OpenCraft();
-        }
-
         // 2. 制作完成后按E退出
         if (isCrafting && isAllDone && Input.GetKeyDown(KeyCode.E))
         {
             CloseCraft();
         }
-
         // 3. 制作中按E敲打
         if (isCrafting && !isAllDone && !isHitting && Input.GetKeyDown(KeyCode.E))
         {
             isHitting = true;
         }
-
         HammerAnimate();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            this.tipText.gameObject.SetActive(true);
+            this.tipText.text = "按E开始小游戏";
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        // 1. 未完成且未在制作时，按E进入制作
+        if (!isCrafting && !isAllDone && Input.GetKeyDown(KeyCode.E))
+        {
+            this.tipText.text = "按E锻造";
+            OpenCraft();
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            this.tipText.gameObject.SetActive(false);
+        }
     }
 
     void OpenCraft()
@@ -70,7 +87,7 @@ public class HammerGame : MonoBehaviour
         isCrafting = true;
         cam3rd.SetActive(false);
         cam1st.SetActive(true);
-        playerObj.SetActive(false);
+        //playerObj.SetActive(false);
         barProgress.gameObject.SetActive(true);
     }
 
@@ -80,16 +97,16 @@ public class HammerGame : MonoBehaviour
 
         cam3rd.SetActive(true);
         cam1st.SetActive(false);
-        playerObj.SetActive(true);
+        //playerObj.SetActive(true);
 
         // 全部UI关闭
         barProgress.gameObject.SetActive(false);
-        uiSuccessParent.SetActive(false);
         tipText.gameObject.SetActive(false);
 
         // 进度和锤子重置
         barProgress.value = 0;
         transform.localRotation = Quaternion.Euler(0, 0, z_Up);
+        UIManager.Instance.ContrlPromote(4);
     }
 
     void HammerAnimate()
@@ -102,6 +119,7 @@ public class HammerGame : MonoBehaviour
             if (Quaternion.Angle(transform.localRotation, downRot) < 2f)
             {
                 AddProgress();
+                this.Eff.Play();
                 isHitting = false;
             }
         }
@@ -126,10 +144,12 @@ public class HammerGame : MonoBehaviour
     void FinishAll()
     {
         isAllDone = true;
-        uiSuccessParent.SetActive(true);
-
+        UIManager.Instance.ContrlPromote(4);
+        this.tipText.gameObject.SetActive(false);
         // 横排提示文字，放在“燕尾榫制作成功！”下面
-        tipText.gameObject.SetActive(true);
-        tipText.text = "再次按E结束任务";
+        UIManager.Instance.ContrlPromote(7);
+        BagManager.Instance.AddBagItem(2);
+        BagManager.Instance.AddBagItem(4);
+        BagManager.Instance.AddBagItem(5);
     }
 }
