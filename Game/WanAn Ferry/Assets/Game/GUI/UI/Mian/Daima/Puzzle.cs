@@ -92,6 +92,8 @@ public class Puzzle : MonoBehaviour
             ContrlPuzzle(0);
             Destroy(gameObject, 1.4f);
             TaskManager.Instance.SetFinishTask(4);
+            EventManager.OnFinishTask(4);
+            BagManager.Instance.AddBagItem(6);
             UIManager.Instance.ContrlPromote(5);
         }
     }

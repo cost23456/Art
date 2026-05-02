@@ -14,7 +14,6 @@ public class BagManager : Singleton<BagManager>
             if (itemData.itemInfo == ItemDesc)
             {
                 return itemData;
-                break;
             }
         }
         Debug.Log("找不到对应的物体");
@@ -27,7 +26,6 @@ public class BagManager : Singleton<BagManager>
             if (itemData.Item_ID == Item_ID)
             {
                 return itemData;
-                break;
             }
         }
         Debug.Log("找不到对应的物体");

@@ -20,7 +20,7 @@ public class BagMain : MonoBehaviour
     //方法
     public void RefreshGird()
     {
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 50; i++)
         {
             GameObject slot  =  Instantiate(emtySlot);
             slot.transform.SetParent(slotGrid.transform);
@@ -31,7 +31,7 @@ public class BagMain : MonoBehaviour
     public void RefreshAllItem()
     {
         this.RefreshSlotsList();
-        for (int i = 0; i < 9; i++) 
+        for (int i = 0; i < 50; i++) 
         {
             if (i < this.myBag.itemList.Count)
             {

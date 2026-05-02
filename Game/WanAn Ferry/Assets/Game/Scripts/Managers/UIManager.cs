@@ -105,7 +105,15 @@ public class UIManager : Singleton<UIManager>
     }
     public void OpenTaskLittle()
     {
-        this.mTaskLittle.SetActive(true);
+        if(mTaskLittle == null) return;
+        if (mTaskLittle.gameObject.activeSelf == false)
+        {
+            this.mTaskLittle.SetActive(true);
+        }
+        else if (mTaskLittle.gameObject.activeSelf == true)
+        {
+            this.mTaskLittle.SetActive(false);
+        }
     }
     public void ContrlBagPage()
     {

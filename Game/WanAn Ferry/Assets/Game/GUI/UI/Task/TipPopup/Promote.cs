@@ -24,7 +24,7 @@ public class Promote : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             this.gameObject.SetActive(false);
         }
