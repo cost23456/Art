@@ -1,22 +1,23 @@
 using UnityEngine;
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
     private CharacterController Controller;
     private Animator animator;
+
     [Header("输入设置")]
     private float horizontal;
     private float vertical;
-    private Vector3 direction;
 
     [Header("旋转设置")]
-    [SerializeField] private float turnSpeed;//角色旋转速度
+    [SerializeField] private float turnSpeed;
     [SerializeField] private Camera mainCamera;
 
     [Header("跳跃设置")]
-    [SerializeField] private float jumpHeight;//跳跃高度
-    [SerializeField] private float gravity;//重力加速度
-    private Vector3 velocityGravity;//速度
+    [SerializeField] private float jumpHeight;
+    [SerializeField] private float gravity = -9.8f;
+    private Vector3 velocityGravity;
     private bool IsGround;
 
     [Header("移动设置")]
@@ -25,8 +26,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        this.Controller = GetComponent<CharacterController>();
-        this.animator = GetComponent<Animator>();
+        Controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -39,9 +40,9 @@ public class PlayerMove : MonoBehaviour
 
     private void SetPlayerMove()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-        direction = new Vector3(horizontal, 0, vertical);
+        // 用 GetAxisRaw 解决打包后输入平滑导致不切换动画
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 cameraForward = mainCamera.transform.forward;
         Vector3 cameraRight = mainCamera.transform.right;
@@ -49,26 +50,31 @@ public class PlayerMove : MonoBehaviour
         cameraForward.Normalize();
         cameraRight.Normalize();
 
-        // 【这里修复了！】正确的相机视角移动公式
         moveDirection = cameraForward * vertical + cameraRight * horizontal;
 
-        Controller.Move(moveSpeed * Time.deltaTime * moveDirection.normalized);
-        if (moveDirection != Vector3.zero)
+        // 关闭根运动，避免动画和代码移动打架
+        animator.applyRootMotion = false;
+
+        // 判断是否有移动输入
+        float inputMag = new Vector2(horizontal, vertical).magnitude;
+        if (inputMag > 0.1f)
         {
-            this.animator.SetBool("Run", true);
+            Controller.Move(moveSpeed * Time.deltaTime * moveDirection.normalized);
+            animator.SetBool("Run", true);
         }
-        else 
+        else
         {
-            this.animator.SetBool("Run", false);
+            animator.SetBool("Run", false);
         }
     }
 
     private void SetPlayerRotation()
     {
-        if (direction != Vector3.zero)
+        float inputMag = new Vector2(horizontal, vertical).magnitude;
+        if (inputMag > 0.1f)
         {
-            Quaternion targetrotation = Quaternion.LookRotation(moveDirection, transform.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, turnSpeed * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection, transform.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
         }
     }
 
@@ -76,22 +82,19 @@ public class PlayerMove : MonoBehaviour
     {
         if (IsGround && Input.GetButtonDown("Jump"))
         {
-            velocityGravity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            velocityGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
 
     private void SetPlayerGravity()
     {
+        velocityGravity.y += gravity * Time.deltaTime;
         Controller.Move(velocityGravity * Time.deltaTime);
 
         IsGround = Controller.isGrounded;
-        if (IsGround)
+        if (IsGround && velocityGravity.y < 0)
         {
             velocityGravity.y = -2f;
-        }
-        else
-        {
-            velocityGravity.y += gravity * Time.deltaTime;
         }
     }
 }

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Rendering.Universal;
 
 public class DirectorContrl : MonoBehaviour
 {
+    public bool isVelli = false;
     public List<PlayableDirector> Directors;
     public Cinemachine.CinemachineBrain cinemachineBrain;
     private void Start()
@@ -13,7 +15,14 @@ public class DirectorContrl : MonoBehaviour
         {
             director.initialTime = 0;
         }
-        this.cinemachineBrain.enabled = false;
+        if (isVelli)
+        {
+            ContrlDirectors(0);
+        }
+        else
+        {
+            this.cinemachineBrain.enabled = false;
+        }
     }
     public void ContrlDirectors(int aIndex)
     {

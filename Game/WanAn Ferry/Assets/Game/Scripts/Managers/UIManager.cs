@@ -47,11 +47,15 @@ public class UIManager : Singleton<UIManager>
         {
             this.ContrlMapPage();
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.ContrlPromote(8);
+        }
     }
     //方法
 
     // 打开 UI 时显示鼠标 + 解锁
-    void ShowCursorForUI(bool show)
+    public void ShowCursorForUI(bool show)
     {
         if (show)
         {
@@ -70,10 +74,12 @@ public class UIManager : Singleton<UIManager>
         if (mMainMenu.gameObject.activeSelf == false)
         {
             this.mMainMenu.gameObject.SetActive(true);
+            this.ShowCursorForUI(true);
         }
         else if (mMainMenu.gameObject.activeSelf == true)
         {
             this.mMainMenu.gameObject.SetActive(false);
+            this.ShowCursorForUI(false);
         }
     }
     public void ContrlSettingPage()
